@@ -1,0 +1,26 @@
+name: Bug report
+description: Report a problem with the website or repository
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How can we reproduce it?
+      placeholder: Steps, page URL/path, browser/device if relevant.
+  - type: textarea
+    id: accessibility
+    attributes:
+      label: Accessibility impact
+      description: If this affects keyboard use, screen readers, zoom, contrast, motion, or another accessibility concern, describe it here.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes

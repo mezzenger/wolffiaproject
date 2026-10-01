@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Wolffia Public Site
+GenericName=Public Education Website
+Comment=Open the Wolffia public-site brief or local website preview
+Exec=/home/alvin/Projects/wolffia-public-site/launch.sh
+Icon=/home/alvin/Projects/wolffia-public-site/wolffia-public-site.svg
+Terminal=false
+Categories=Education;
+Keywords=wolffia;public;website;education;food resilience;
+StartupNotify=true

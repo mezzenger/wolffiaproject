@@ -1,0 +1,29 @@
+name: Accessibility issue
+description: Report or propose an accessibility improvement
+title: "[A11y] "
+labels: ["accessibility"]
+body:
+  - type: textarea
+    id: issue
+    attributes:
+      label: Accessibility issue
+      description: Describe the barrier and the affected page or component.
+    validations:
+      required: true
+  - type: checkboxes
+    id: area
+    attributes:
+      label: Area
+      options:
+        - label: Keyboard / focus
+        - label: Screen reader / semantics
+        - label: Contrast / color
+        - label: Zoom / text sizing
+        - label: Motion / animation
+        - label: Touch / mobile
+        - label: Alternative text / media
+  - type: textarea
+    id: test
+    attributes:
+      label: How was this tested?
+      placeholder: Browser, device, assistive technology, zoom level, or manual steps.

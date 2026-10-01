@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accessibility commitments for The Wolffia Project website.">
+  <title>Accessibility | The Wolffia Project</title>
+  <link rel="icon" href="wolffia-public-site.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="accessibility">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header"><div class="shell header-inner">
+    <a class="brand" href="index.html" aria-label="The Wolffia Project home"><img src="wolffia-public-site.svg" alt=""><span><strong>The Wolffia Project</strong><small>Food, water, and community resilience</small></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation"><a data-nav="home" href="index.html">Home</a><a data-nav="mission" href="mission.html">Mission</a><a data-nav="why-aquatic-foods" href="why-aquatic-foods.html">Why aquatic foods?</a><a data-nav="wolffia" href="wolffia.html">Wolffia</a><a data-nav="water-spinach" href="water-spinach.html">Water spinach</a><a data-nav="responsible-growing" href="responsible-growing.html">Responsible growing</a><a data-nav="pilot-project" href="pilot-project.html">Pilot project</a><a data-nav="recipes" href="recipes.html">Recipes</a><a data-nav="community" href="community.html">Community</a><a data-nav="contact" href="contact.html">Contact</a></nav>
+  </div></header>
+  <main id="main-content"><div class="shell page-hero"><p class="eyebrow">Everyone belongs here</p><h1>Accessibility is a design requirement, not a later polish step.</h1><p>This first version uses semantic HTML, plain language, visible focus styles, responsive layout, keyboard-accessible navigation, and reduced-motion support.</p></div>
+    <div class="shell content-layout"><article class="prose"><h2>Current commitments</h2><ul class="check-list"><li>Use landmarks, one clear page heading, and logical heading order.</li><li>Provide a skip link and visible keyboard focus indicators.</li><li>Keep text and controls readable at narrow widths and larger zoom.</li><li>Use contrast that does not depend on color alone.</li><li>Respect <code>prefers-reduced-motion</code>.</li><li>Keep links descriptive and avoid unexplained jargon.</li><li>Provide useful alternative text for meaningful images and label decorative images appropriately.</li><li>Review forms, transcripts, captions, touch targets, and screen-reader behavior before launch.</li></ul><h2>Known review items</h2><p>A human review is still needed at multiple zoom levels, with keyboard-only navigation, a screen reader, and on a mobile device. If a future contact form, video, recipe image, or data visualization is added, its accessible name, instructions, error state, alternatives, and consent treatment must be reviewed too.</p><h2>Feedback route</h2><p>A public accessibility contact route will be added when the project approves its contact destination and privacy treatment. Until then, this page records the commitment without inventing an address.</p></article><aside class="side-note"><h2>Target</h2><p>Use current WCAG 2.2 AA practices as a review baseline before public launch.</p><p class="meta">The detailed launch checklist is maintained with the project materials.</p></aside></div>
+  </main>
+  <footer class="site-footer"><div class="shell footer-grid"><div><strong>The Wolffia Project</strong><p>Growing food resilience from water, wisdom, and community.</p></div><div><strong>Explore</strong><a href="sources.html">Sources and further reading</a><a href="accessibility.html">Accessibility</a><a href="privacy.html">Privacy</a></div><div><strong>Draft status</strong><p>Local first version. Project identity, contact details, claims, media, and publication approvals remain under review.</p></div></div><div class="shell footer-bottom"><span>© <span data-year></span> The Wolffia Project</span><span>Built as a lightweight static site</span></div></footer>
+</body>
+</html>

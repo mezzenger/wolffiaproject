@@ -1,0 +1,22 @@
+name: Feature or improvement
+description: Propose an improvement to the site, documentation, or project workflow
+title: "[Idea] "
+labels: []
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What need does this address?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed approach
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Review or launch considerations
+      description: Note any science, food-safety, privacy, accessibility, media-permission, or deployment implications.

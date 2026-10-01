@@ -1,0 +1,15 @@
+name: Check static site
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  site-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check shell syntax
+        run: bash -n launch.sh tests/check-site.sh
+      - name: Check site structure and links
+        run: ./tests/check-site.sh

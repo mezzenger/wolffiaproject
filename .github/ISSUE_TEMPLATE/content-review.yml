@@ -1,0 +1,38 @@
+name: Content / science / food-safety review
+description: Propose or review a public-facing factual claim
+title: "[Review] "
+labels: ["content", "needs-review"]
+body:
+  - type: textarea
+    id: claim
+    attributes:
+      label: Claim or wording to review
+      description: Quote the proposed wording or identify the page and section.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Review area
+      options:
+        - Wolffia science
+        - Nutrition
+        - Food safety
+        - Cultivation
+        - Water-spinach regulation
+        - Environmental / ecological
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Supporting sources
+      description: Prefer primary literature, government, university/extension, or recognized standards sources. Include access/check date for time-sensitive material.
+    validations:
+      required: true
+  - type: textarea
+    id: uncertainty
+    attributes:
+      label: Uncertainty or limitations
+      description: Note disagreement, evidence gaps, jurisdiction limits, or conditions that should remain visible in the public wording.
