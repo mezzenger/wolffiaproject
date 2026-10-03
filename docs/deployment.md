@@ -1,21 +1,20 @@
 # Deployment guide
 
-The site is static-first and ready for a Cloudflare Pages preview from the `public/` directory.
+## Current GitHub Pages site
 
-Recommended Pages settings:
+The live address is <https://mezzenger.github.io/wolffiaproject/>. The local preview serves `public/`. GitHub Pages is currently using its default branch/Jekyll build from the repository root, which puts the rendered README at `/` and the intended site at `/public/index.html`. The October 2 Pages build log confirms that Jekyll rendered `README.md` as `/index.html` and uploaded the `public/`, `docs/`, and `tests/` directories.
 
-- Framework preset: none
-- Build command: none
-- Build output directory: `public`
-- Production branch: `main`, after review and approval
+The workflow at `.github/workflows/deploy-pages.yml` uploads only `public/`.
 
-The repository still needs to be connected to the project owner’s GitHub and Cloudflare accounts. No account, domain, access control, or public deployment has been changed by this local build.
+To make the live root match the local preview:
 
-Before the first deployment:
+1. Open repository **Settings → Pages → Build and deployment** and set **Source** to **GitHub Actions**. GitHub's branch source supports only the branch root or `/docs`, not `/public`.
+2. Run **Actions → Deploy site to GitHub Pages** if the workflow did not start after the push. Confirm it succeeds and that its artifact path is `./public`.
+3. Open <https://mezzenger.github.io/wolffiaproject/> in a fresh browser session. Its page title should be “The Wolffia Project | Food resilience from water, wisdom, and community”; `/mission.html` and `/styles.css` should load at the root.
+4. Confirm <https://mezzenger.github.io/wolffiaproject/docs/project-review.html> and `/tests/check-site.py` are no longer served. The published artifact should contain only `public/`.
 
-1. Confirm the project name, domain, contact route, and publication approvals.
-2. Review [launch-checklist.md](launch-checklist.md).
-3. Confirm that only `public/` is configured as the Pages output directory. Internal `docs/` and `tests/` must remain outside the published output.
-4. Add final canonical URLs, sitemap, social image, and robots policy after the domain is known.
-5. Review the generated preview URL on desktop, mobile, keyboard navigation, and a screen reader.
-6. Verify the public URL after deployment.
+The website is still a draft. Complete [launch-checklist.md](launch-checklist.md) before treating this public URL as an approved launch. GitHub Pages does not apply Cloudflare's `public/_headers` configuration; review GitHub Pages security-header and privacy implications separately.
+
+## Cloudflare Pages alternative
+
+If the project moves to Cloudflare Pages, use no build command and `public` as the output directory. Do not point Cloudflare at the repository root. Update the public URL, canonical metadata, sitemap, and robots policy only after the domain and publication are approved.

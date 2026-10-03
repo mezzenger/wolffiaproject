@@ -2,9 +2,11 @@
 
 Static-first public-facing Wolffia and water-spinach food-resilience website.
 
+Current version: **0.2.0** (prelaunch)
+
 ## Current status
 
-This directory now contains a lightweight static first draft with the required public pages in `public/`, shared styling, responsive navigation, a clearly labeled conceptual illustration, source notes, and internal launch registers outside the publish directory. It is a local preview, not a published or legally approved site.
+This directory contains a lightweight static first draft with the required public pages in `public/`, shared styling, responsive navigation, a clearly labeled conceptual illustration, source notes, and internal launch registers outside the intended publish directory. GitHub Pages currently publishes the repository root through Jekyll, so the online root does not match the local preview and includes internal materials. The draft is publicly reachable but has not received publication or legal approval.
 
 The source briefs are [MAIN public-facing.md](MAIN%20public-facing.md) and [Wolffia_Public_Website_CODEX_BRIEF.md](Wolffia_Public_Website_CODEX_BRIEF.md). The draft keeps project identity, contact details, pilot results, media permissions, and claims requiring review explicitly unresolved.
 
@@ -55,7 +57,7 @@ The project can begin collaborating before public launch. Final branding, public
 
 ## Deployment
 
-Configure Cloudflare Pages with no build command and `public` as the output directory. See [docs/deployment.md](docs/deployment.md). The local draft intentionally does not connect accounts, configure a domain, or publish publicly.
+GitHub Pages must use the repository workflow, which publishes only `public/`. See [docs/deployment.md](docs/deployment.md) for the required Pages setting and verification steps. Cloudflare Pages remains an alternative.
 
 ## Missing before public launch
 
@@ -65,4 +67,4 @@ Configure Cloudflare Pages with no build command and `public` as the output dire
 - Recipe Atlas URL and navigation integration
 - Contact destination and privacy language
 - Accessibility, responsive, link, and browser testing
-- Initial source commit/remote connection and Cloudflare Pages configuration
+- Correct GitHub Pages publishing source and verify that only `public/` is served

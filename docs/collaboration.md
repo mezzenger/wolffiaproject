@@ -9,17 +9,17 @@ This repository is intended to become the shared working home for the public-fac
 - Changes reach `main` through pull requests.
 - GitHub Issues track bugs, reviews, research questions, content decisions, and launch tasks.
 - GitHub Actions runs the static-site check on pushes and pull requests.
-- Cloudflare Pages should use `public/` as the output directory and create preview deployments for pull requests/branches when the Git integration is connected.
+- The current GitHub Pages site needs the deployment workflow in `.github/workflows/deploy-pages.yml` and **Settings → Pages → Source: GitHub Actions** so it publishes only `public/`. Cloudflare Pages is an alternative and should also use `public/` as its output directory.
 
 ## Suggested first milestone: collaboration-ready
 
-- [ ] Create the GitHub repository under the chosen owner or organization.
-- [ ] Push the existing source to `main`.
+- [x] Create the GitHub repository under the chosen owner or organization.
+- [x] Push the existing source to `main`.
 - [ ] Protect `main` from direct changes where practical.
 - [ ] Require the site-check workflow to pass before merge.
 - [ ] Turn launch-checklist items into GitHub Issues.
 - [ ] Assign reviewers for scientific/food-safety, accessibility, media, and project-owner approval as available.
-- [ ] Connect Cloudflare Pages only after the repository owner approves the connection.
+- [ ] Correct GitHub Pages to publish only `public/` and verify the live site.
 
 ## Suggested labels
 
