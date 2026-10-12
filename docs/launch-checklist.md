@@ -8,12 +8,15 @@
 - [ ] Food-safety and ecological reviewers have approved the responsible-growing language.
 - [ ] No private tracker data, raw incident details, exact private locations, or unpublished results are exposed.
 - [ ] Recipe sources, contributors, permissions, and review status are recorded.
+- [ ] The EFSA *W. globosa* powder opinion is represented with its actual safety conclusion; no project food-use approval is inferred.
+- [ ] Any recipe or image proposed from the local drafts has item-level rights, cultural, allergen, food-safety, and owner review.
+- [ ] The owner has decided whether the public draft may remain reachable before final publication approval.
 - [ ] Contact destination, privacy notice, and response owner are approved.
 - [ ] Image licenses, consents, credits, and alt text are complete.
 
 ## Technical and accessibility checks
 
-- [ ] `./tests/check-site.sh` passes.
+- [ ] `./tests/check-all.sh` passes on the exact proposed publication tree.
 - [ ] Local preview reviewed on desktop and mobile widths.
 - [ ] Keyboard-only navigation and visible focus reviewed.
 - [ ] Screen-reader landmarks, headings, labels, and link purpose reviewed.
