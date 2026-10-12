@@ -10,6 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Check shell syntax
-        run: bash -n launch.sh tests/check-site.sh
-      - name: Check site structure and links
-        run: ./tests/check-site.sh
+        run: bash -n launch.sh tests/check-site.sh tests/check-all.sh
+      - name: Check source and production artifact
+        run: ./tests/check-all.sh

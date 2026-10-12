@@ -8,8 +8,8 @@ This repository is intended to become the shared working home for the public-fac
 - Work happens on short-lived branches.
 - Changes reach `main` through pull requests.
 - GitHub Issues track bugs, reviews, research questions, content decisions, and launch tasks.
-- GitHub Actions runs the static-site check on pushes and pull requests.
-- The current GitHub Pages site needs the deployment workflow in `.github/workflows/deploy-pages.yml` and **Settings → Pages → Source: GitHub Actions** so it publishes only `public/`. Cloudflare Pages is an alternative and should also use `public/` as its output directory.
+- GitHub Actions runs the source and production-artifact checks on pushes and pull requests.
+- The current GitHub Pages site needs the deployment workflow in `.github/workflows/deploy-pages.yml` and **Settings → Pages → Source: GitHub Actions** so it publishes only verified `dist/`. Cloudflare Pages is an alternative and should build with `python3 tools/build.py` and use `dist/` as its output directory.
 
 ## Suggested first milestone: collaboration-ready
 

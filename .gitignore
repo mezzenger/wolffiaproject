@@ -3,5 +3,9 @@
 node_modules/
 dist/
 build/
+.env
+.env.*
+!.env.example
+*.pyc
 .venv/
 __pycache__/
