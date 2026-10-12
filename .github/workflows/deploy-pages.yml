@@ -4,8 +4,6 @@ on:
   push:
     branches: ["main"]
 
-  workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
@@ -27,13 +25,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Build and verify publishable output
+        run: ./tests/check-all.sh
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload website
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./dist
 
       - name: Deploy
         id: deployment

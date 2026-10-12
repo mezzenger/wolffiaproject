@@ -4,13 +4,13 @@ set -euo pipefail
 site_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 site_url="http://127.0.0.1:4174/"
 brief_file="$site_dir/MAIN public-facing.md"
-publish_dir="$site_dir/public"
+source_dir="$site_dir/public"
 pid_file="/tmp/wolffia-public-site-${UID}.pid"
 log_file="/tmp/wolffia-public-site-${UID}.log"
 
 is_site_ready() {
-  curl --fail --silent --show-error --max-time 1 "$site_url" 2>/dev/null \
-    | grep --quiet -i '<html'
+  curl --fail --silent --show-error --max-time 1 "${site_url}__twp_preview" 2>/dev/null \
+    | grep --quiet 'twp-preview-v1'
 }
 
 show_error() {
@@ -20,7 +20,7 @@ show_error() {
   printf 'Wolffia Public Site: %s\n' "$1" >&2
 }
 
-if [[ ! -f "$publish_dir/index.html" ]]; then
+if [[ ! -f "$source_dir/index.html" ]]; then
   if [[ "${LAUNCHER_NO_OPEN:-0}" != "1" ]]; then
     xdg-open "$brief_file" >/dev/null 2>&1 &
   else
@@ -28,6 +28,8 @@ if [[ ! -f "$publish_dir/index.html" ]]; then
   fi
   exit 0
 fi
+
+python3 "$site_dir/tools/build.py"
 
 if ! is_site_ready; then
   if curl --silent --max-time 1 "$site_url" >/dev/null 2>&1; then
@@ -42,9 +44,7 @@ if ! is_site_ready; then
     fi
   fi
 
-  nohup python3 -m http.server 4174 \
-    --bind 127.0.0.1 \
-    --directory "$publish_dir" >>"$log_file" 2>&1 &
+  nohup python3 "$site_dir/tools/dev.py" >>"$log_file" 2>&1 &
   server_pid=$!
   printf '%s\n' "$server_pid" >"$pid_file"
 

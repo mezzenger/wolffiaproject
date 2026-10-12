@@ -18,12 +18,12 @@ Please do not add private pilot data, private locations, personal contact detail
 ## Development workflow
 
 1. Create or choose an Issue describing the work.
-2. Create a branch from `main` using a descriptive name such as `docs/source-review` or `fix/mobile-navigation`.
+2. Create a short-lived branch from `main` using a descriptive name such as `docs/source-review` or `fix/mobile-navigation`.
 3. Make the smallest practical change that solves the issue.
 4. Run the local checks:
 
    ```bash
-   ./tests/check-site.sh
+   ./tests/check-all.sh
    ```
 
 5. Preview the site locally:
@@ -33,6 +33,7 @@ Please do not add private pilot data, private locations, personal contact detail
    ```
 
 6. Open a pull request and complete the pull-request checklist.
+   Request review of content claims, accessibility, media, or deployment changes from an appropriate reviewer. Keep `main` protected when repository settings allow: require the `site-check` job, block force pushes, and require a pull request and at least one review. The owner must apply these repository settings.
 7. Keep discussion and review attached to the Issue or pull request so decisions remain visible to collaborators.
 
 ## Review expectations
